@@ -26,10 +26,14 @@ body {
     font-size: 1rem;
     font-family: 'Montserrat';
     background: hsl(215, 100%, calc(var(--bg-lightness) * 100%));
-    background-color: #f7f0f0;
+    background-color: #cab8b8;
+    margin: 0;
+    padding: 0;
 }
-
-
+z
+h1{
+  border-radius: 10px;
+}
 section {
     padding-bottom: 5rem;
 }
@@ -102,15 +106,43 @@ section {
 
 
 h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
+  font-family: 'Lemon', serif;
+  font-size: clamp(1.5em, 5vw, 2.5em); /* Ajusta entre 1.5em e 2.5em baseado no viewport */
+  font-style: normal;
+  color: var(--laranja-claro);
+  text-align: center; /* Para centralizar o título */
+  word-wrap: break-word; /* Evita que palavras longas estourem o layout */
+  
+}
+
+
+h2 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que elementos internos quebrem linha */
+  justify-content: center; /* Centraliza o conteúdo */
+  gap: 10px; /* Adiciona espaçamento entre os elementos internos */
+}
+
+h2 {
+  max-width: 90%; /* Evita que ocupe toda a tela */
+  margin: auto; /* Centraliza no meio da tela */
+}
+@media (max-width: 600px) {
+  h2 {
+      font-size: 1.8em; /* Ajusta o tamanho para telas menores */
+  }
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align: center;
+  font:bolder;
 }
 
 
 #galeria {
-    background-color: #090909;
+    background-color: #cab8b8;
 }
 
 
