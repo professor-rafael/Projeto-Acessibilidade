@@ -26,7 +26,7 @@ body {
     font-size: 1rem;
     font-family: 'Montserrat';
     background: hsl(215, 100%, calc(var(--bg-lightness) * 100%));
-    background-color: #cab8b8;
+    background-color: #bebbbb;
     margin: 0;
     padding: 0;
 }
@@ -62,20 +62,11 @@ section {
     height: auto;
 }
 
-
-.esquerda-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-
 .botao-inicio {
     background-color: var(--laranja-claro);
-    border-radius: 30px;
+    border-radius: 4px;
     border: none;
-    width: 14em;
+    width: 10em;
     height: 3em;
     align-content: center;
 
@@ -241,6 +232,7 @@ p {
   .container h1 {
     font-size: 42px;
     font-weight: bold;
+    width: 100%;
   }
   
   .container h1 span {
@@ -249,13 +241,16 @@ p {
   
   #entrada-de-conteudo {
     display: flex;
-    width: 80%;
-    gap: 20px;
+    text-align: center;
+    width: 100%;
+    gap: 10px;
     align-items: center;
   }
   
   #entrada-de-conteudo textarea {
     width: 80%;
+    text-align: center;
+    align-items: center;
     height: 150px;
     border: none;
     border-radius: 5px;
@@ -266,6 +261,7 @@ p {
   
   input[type="file"] {
     display: none;
+    text-align: center;
   }
   
   .acoes {
@@ -273,12 +269,14 @@ p {
     align-items: center;
     gap: 10px;
     width: 80%;
+    text-align: center;
   }
   
   .acao-box {
     padding: 15px;
     gap: 15px;
     flex: 1;
+    text-align: center;
   }
   
   .acoes select,
@@ -292,6 +290,7 @@ p {
     width: 50%;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
   }
   
   #selecao-voz {
@@ -309,10 +308,12 @@ p {
     font-size: 20px;
     padding: 15px;
     background-color: #ed9222;
+    text-align: center;
   }
   
   .acoes button:hover,
   #arquivo-label:hover {
     background-color: #d48a35;
   }
+  
   
