@@ -6,58 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>RasinformaticA</title>
+    
+    <!-- Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="newton-light-bulb.css"/>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Lemon&display=swap" rel="stylesheet">
+    
+    <!-- CSS do Projeto -->
+    <link rel="stylesheet" href="newton-light-bulb.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <script src="script.js"></script>
+    
     <link rel="icon" href="icon.png">
 </head>
-<style>
-  body{
-  min-height:10vh;
-  }
 
-  ::-webkit-scrollbar 
-  {
-      width: 12px;
-  }
-
-  ::-webkit-scrollbar-track 
-  {
-      background:  #CB6D43;;
-  }
-
-  ::-webkit-scrollbar-thumb 
-  {
-      background: #01021a;
-      border-radius: 12-0px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover 
-  {
-      opacity: .95;
-  }
-</style>
 <body>
-<body>
-    <header class=" p-5">
 
-          <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="img/logo.png" width="25%"  height= "35%" >
+    <header class="p-4">
+        <nav class="container d-flex justify-content-between align-items-center flex-wrap">
+            <img src="img/logo.png" width="200" height="auto" alt="Logo RasinformaticA">
 
-            <ul class="nav mt-5">
+            <ul class="nav mt-3 mt-md-0">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
-                   <div id="acessibilidade" class="menu-acessibilidade"> 
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
+
+            <div id="acessibilidade" class="menu-acessibilidade">
+                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">
+                    Acessibilidade
+                </button>
                 <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
                     <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>         
+                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores">
+                        <i class="bi bi-shadows"></i>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -65,118 +50,126 @@
 
     <main class="container my-5">
 
-            <section id="tropicalia" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre a tropicália">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center ">
-                    
-                </div>
-                <div class="col-5">
+        <!-- Seção Início -->
+        <section id="inicio" class="my-5 pt-4" tabindex="0" aria-label="Seção principal">
+            <div class="container d-flex align-items-center justify-content-center flex-wrap">
+                <div class="col-12 col-md-8 text-center">
                     <h2>RasinformaticA</h2>
-                    <p class="p-2">A Rasinformática é uma empresa especializada em soluções de tecnologia,
-                         oferecendo serviços como manutenção de equipamentos, redes e suporte técnico. 
-                        </p>
+                    <p class="p-2" style="font-size: 1.1rem;">
+                        A Rasinformática é uma empresa especializada em soluções de tecnologia,
+                        oferecendo serviços como manutenção de equipamentos, redes e suporte técnico.
+                    </p>
                 </div>
             </div>
         </section>
 
+        <!-- Seção Galeria -->
         <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Imagens dos meus trabalhos</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
+            <h2 class="text-center pt-4">Imagens dos meus trabalhos</h2>
+            <div class="container p-3 mt-3">
 
                 <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy"> <br>
+                    <div class="col-md-4 mb-3">
+                        <img src="https://via.placeholder.com/400x300/FF862A/fff?text=Projeto+1" 
+                             class="img-fluid rounded-4" loading="lazy" alt="Imagem do trabalho 1">
                     </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg" class="img-fluid rounded-5"
-                            loading="lazy"> <br>
-                    </div>
-                </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Gilberto_Gil_nos_anos_1960.tif.jpg" class="img-fluid rounded-5" loading="lazy"> <br>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Caetano_Veloso_no_III_Festival_da_Música_Popular.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy"> <br>
+                    <div class="col-md-4 mb-3">
+                        <img src="https://via.placeholder.com/400x300/CB6D43/fff?text=Projeto+2" 
+                             class="img-fluid rounded-4" loading="lazy" alt="Imagem do trabalho 2">
                     </div>
                 </div>
-             </div>
+                <div class="row mt-3 justify-content-md-center">
+                    <div class="col-md-4 mb-3">
+                        <img src="https://via.placeholder.com/400x300/ed9222/fff?text=Projeto+3" 
+                             class="img-fluid rounded-4" loading="lazy" alt="Imagem do trabalho 3">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="https://via.placeholder.com/400x300/1a1a2e/fff?text=Projeto+4" 
+                             class="img-fluid rounded-4" loading="lazy" alt="Imagem do trabalho 4">
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Seção Contato -->
         <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
+            <div class="container p-4 d-flex justify-content-center">
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
                     <h2 class="mb-3">Contato</h2>
-                    <form>
+                    <form id="form-contato">
                         <div class="form-group mb-3">
                             <label for="nome">Nome</label>
                             <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
+                                placeholder="Digite seu nome completo" required>
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
+                                placeholder="Digite seu email" required>
                         </div>
                         <div class="form-group mb-3">
                             <label for="mensagem">Mensagem</label>
                             <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
+                                placeholder="Escreva sua mensagem" required></textarea>
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
+
+        <!-- Conversor de Texto para Fala -->
+        <section class="conversor-container">
+            <h1>Conversor de <span>Texto</span> para <span>Fala</span></h1>
+            <p>Digite um texto ou envie um arquivo .txt para ser lido:</p>
+
+            <div id="entrada-de-conteudo">
+                <textarea placeholder="Digite algo aqui..." id="entrada-de-texto"></textarea>
+                <div>
+                    <label for="upload-arquivo" id="arquivo-label">📁 Enviar arquivo .txt</label>
+                    <input type="file" id="upload-arquivo" accept=".txt" />
+                </div>
+            </div>
+
+            <div class="acoes">
+                <div class="acao-box">
+                    <p>🎤 Selecione a voz:</p>
+                    <select id="selecao-voz"></select>
+                </div>
+                <div class="acao-box">
+                    <p>🔊 Clique para ouvir:</p>
+                    <button id="ouvir-btn">Ouvir</button>
+                </div>
+                <div class="acao-box">
+                    <p>💾 Baixe o arquivo</p>
+                    <button id="baixar-texto-btn">Baixar Texto</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <div class="container">
-        <h1>Conversor de <span>Texto</span> para <span>Fala</span></h1>
-        <p>Digite um texto ou envie algum arquivo para ser lido:</p>
-        <div id="entrada-de-conteudo">
-          <textarea
-            placeholder="Digite alguma coisa..."
-            id="entrada-de-texto"
-          ></textarea>
-          <div>
-            <label for="upload-arquivo" id="arquivo-label">Enviar arquivo</label>
-            <input type="file" id="upload-arquivo" accept=".txt" />
-          </div>
-        </div>
-        <div class="acoes">
-          <div class="acao-box">
-            <p>Selecione a voz:</p>
-            <select id="selecao-voz"></select>
-          </div>
-          <div class="acao-box">
-            <p>Clique para ouvir:</p>
-            <button id="ouvir-btn">Ouvir</button>
-          </div>
-          <div class="acao-box">
-            <p> Baixe o arquivo</p>
-            <button id="baixar-texto-btn">Baixar Texto</button>
-          </div>
-        </div>
-        <footer>
-            
-            <p>Contatos</p>
-            <i class="bi bi-whatsapp"></i>
-            <i class="bi bi-youtube"></i>
-            <i class="bi bi-tiktok"></i>
-            <p class="mt-3">Estilizado por Rafael®️</p>
-            <a href="RasinformaticA" class="btn btn-primary btn-lg botao-inicio fw-semibold">RasinformaticA</a>
-        </footer>
-      </div>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></scrip>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="script.js" defer></script>
-  
+    <!-- Rodapé -->
+    <footer>
+        <p><strong>Contatos</strong></p>
+        <i class="bi bi-whatsapp" title="WhatsApp"></i>
+        <i class="bi bi-youtube" title="YouTube"></i>
+        <i class="bi bi-tiktok" title="TikTok"></i>
+        <p class="mt-3">Estilizado por Rafael®️</p>
+        <a href="#" class="botao-inicio">RasinformaticA</a>
+    </footer>
+
+    <!-- Bibliotecas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MorphSVGPlugin.min.js"></script>
+    
+    <!-- Script do Projeto -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>

@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-
-
-* {
-    box-sizing: border-box;
-  }
+/* ===== RESET E VARIÁVEIS ===== */
 :root {
     --laranja-claro: #FF862A;
     --alto-contraste-fundo: #000000;
@@ -22,46 +16,45 @@
     --bulb-hue: 70;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 1rem;
-    font-family: 'Montserrat';
-    background: hsl(215, 100%, calc(var(--bg-lightness) * 100%));
+    font-family: 'Montserrat', sans-serif;
     background-color: #bebbbb;
     margin: 0;
     padding: 0;
-}
-z
-h1{
-  border-radius: 10px;
-}
-section {
-    padding-bottom: 5rem;
+    min-height: 100vh;
 }
 
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #CB6D43;
+}
+::-webkit-scrollbar-thumb {
+    background: #01021a;
+    border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+    opacity: .95;
+}
 
+/* ===== NAVEGAÇÃO ===== */
 .nav-link {
     color: #CB6D43;
     font-weight: 600;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #FF862A;
 }
 
-.inicio-fundo {
-    background-size: cover;
-    background-position: right;
-    border-radius: 80px;
-    width: 30%;
-    height: 66px;
-    padding: 40px;
-    margin: 0 auto;
-}
-
-.img-inicio {
-    position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
-    height: auto;
-}
-
+/* ===== BOTÕES ===== */
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 4px;
@@ -69,78 +62,49 @@ section {
     width: 10em;
     height: 3em;
     align-content: center;
-
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 3em;
+    transition: background-color 0.3s;
+}
+.botao-inicio:hover {
+    background-color: #e07a20;
+    color: #fff;
 }
 
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
-}
-
-
+/* ===== SEÇÕES ===== */
 #tropicalia {
     position: relative;
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-    url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-}
-
-#tropicalia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
-
-
-h2 {
-  font-family: 'Lemon', serif;
-  font-size: clamp(1.5em, 5vw, 2.5em); /* Ajusta entre 1.5em e 2.5em baseado no viewport */
-  font-style: normal;
-  color: var(--laranja-claro);
-  text-align: center; /* Para centralizar o título */
-  word-wrap: break-word; /* Evita que palavras longas estourem o layout */
-  
-}
-
-
-h2 {
-  display: flex;
-  flex-wrap: wrap; /* Permite que elementos internos quebrem linha */
-  justify-content: center; /* Centraliza o conteúdo */
-  gap: 10px; /* Adiciona espaçamento entre os elementos internos */
 }
 
 h2 {
-  max-width: 90%; /* Evita que ocupe toda a tela */
-  margin: auto; /* Centraliza no meio da tela */
-}
-@media (max-width: 600px) {
-  h2 {
-      font-size: 1.8em; /* Ajusta o tamanho para telas menores */
-  }
+    font-family: 'Lemon', serif;
+    font-size: clamp(1.5em, 5vw, 2.5em);
+    color: var(--laranja-claro);
+    text-align: center;
+    word-wrap: break-word;
 }
 
 p {
-  text-align: justify;
-  text-justify: inter-word;
-  text-align: center;
-  font:bolder;
+    text-align: center;
+    font-weight: 500;
 }
 
-
+/* ===== GALERIA ===== */
 #galeria {
     background-color: #cab8b8;
+    padding: 2rem 0;
+    border-radius: 20px;
 }
 
-
+/* ===== CONTATO ===== */
 #contato {
-    background-size: cover;
-    padding: 1rem 1rem;
-
+    padding: 1rem 0;
 }
 
 .formulario {
@@ -150,170 +114,244 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-weight: bold;
 }
-
 .formulario button {
     background-color: #CB6D43;
     border: none;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
-
+.formulario button:hover {
+    background-color: #b85d37;
+}
 .form-control {
     background-color: #F1EDEF;
 }
-.menu-acessibilidade{
+
+/* ===== ACESSIBILIDADE ===== */
+.menu-acessibilidade {
     position: fixed;
-    top:2rem;
-    right:20px;
+    top: 2rem;
+    right: 20px;
     z-index: 1000;
 }
-
-.rotacao-botao{
+.rotacao-botao {
     transform: rotate(-90deg);
     transform-origin: right center;
+    transition: transform 0.3s;
 }
-
-.opcoes-acessibilidade{
-    margin-top:10px;
+.opcoes-acessibilidade {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
-
-.opcoes-acessibilidade button{
+.opcoes-acessibilidade button {
     margin-bottom: 5px;
 }
-.apresenta-lista{
+.apresenta-lista {
     display: none;
 }
 
-.alto-contraste{
+/* ===== ALTO CONTRASTE ===== */
+.alto-contraste {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
-
 .alto-contraste header,
 .alto-contraste footer,
-.alto-contraste .formulario{
+.alto-contraste .formulario {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
-
-.alto-contraste .nav-link{
+.alto-contraste .nav-link {
     color: var(--alto-contraste-link);
 }
-
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
-.alto-contraste .btn-primary{
+.alto-contraste .btn-primary {
     background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
+    color: var(--alto-contraste-fundo);
 }
-
 .alto-contraste #tropicalia {
     background: none;
 }
-
 .alto-contraste #galeria {
     background-color: var(--alto-contraste-fundo);
 }
-.alto-contraste .fundo-galeria {
-    background: none;
+
+/* ===== CONVERSOR DE TEXTO PARA FALA ===== */
+.conversor-container {
+    background: #1a1a2e;
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 3rem auto;
+    max-width: 800px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.conversor-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.conversor-container h1 span {
+    color: #ed9222;
+}
+.conversor-container p {
+    color: #ccc;
+    margin-bottom: 1rem;
 }
 
-  .container {
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    gap: 20px;
-  }
-  
-  .container h1 {
-    font-size: 42px;
-    font-weight: bold;
-    width: 100%;
-  }
-  
-  .container h1 span {
-    color: #ed9222;
-  }
-  
-  #entrada-de-conteudo {
+#entrada-de-conteudo {
     display: flex;
-    text-align: center;
-    width: 100%;
+    flex-direction: column;
     gap: 10px;
-    align-items: center;
-  }
-  
-  #entrada-de-conteudo textarea {
-    width: 80%;
-    text-align: center;
-    align-items: center;
-    height: 150px;
+    width: 100%;
+}
+#entrada-de-conteudo textarea {
+    width: 100%;
+    height: 120px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     outline: none;
     padding: 15px;
-  }
-  
-  input[type="file"] {
+    background: #2a2a44;
+    color: #fff;
+    resize: vertical;
+    font-family: 'Montserrat', sans-serif;
+}
+#entrada-de-conteudo textarea::placeholder {
+    color: #888;
+}
+
+input[type="file"] {
     display: none;
-    text-align: center;
-  }
-  
-  .acoes {
+}
+
+.acoes {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 80%;
-    text-align: center;
-  }
-  
-  .acao-box {
-    padding: 15px;
+    flex-wrap: wrap;
     gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+.acao-box {
     flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    background: #2a2a44;
+    border-radius: 10px;
     text-align: center;
-  }
-  
-  .acoes select,
-  .acoes button,
-  #arquivo-label {
-    margin: 10px 10px;
-    padding: 10px 10px;
+}
+.acao-box p {
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.acoes select,
+.acoes button,
+#arquivo-label {
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 50%;
+    border-radius: 8px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    text-align: center;
-  }
-  
-  #selecao-voz {
     width: 100%;
-  }
-  
-  .acoes button {
+    transition: all 0.3s;
+}
+#selecao-voz {
+    width: 100%;
+    background: #3a3a5a;
+    color: #fff;
+}
+#selecao-voz option {
+    background: #2a2a44;
+}
+
+.acoes button {
     background-color: #ed9222;
     color: #fff;
-  
-    transition: 0.3s;
-  }
-  
-  #arquivo-label {
-    font-size: 20px;
-    padding: 15px;
+}
+#arquivo-label {
+    display: inline-block;
     background-color: #ed9222;
+    color: #fff;
     text-align: center;
-  }
-  
-  .acoes button:hover,
-  #arquivo-label:hover {
+}
+.acoes button:hover,
+#arquivo-label:hover {
     background-color: #d48a35;
-  }
-  
-  
+    transform: scale(1.02);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    margin-top: 3rem;
+}
+footer i {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #ed9222;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+footer i:hover {
+    transform: scale(1.2);
+    color: #ffaa44;
+}
+footer .botao-inicio {
+    margin-top: 15px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu-acessibilidade {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 10px;
+    }
+    .opcoes-acessibilidade {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .conversor-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+    .acoes {
+        flex-direction: column;
+    }
+    .acao-box {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .conversor-container h1 {
+        font-size: 1.5rem;
+    }
+    #entrada-de-conteudo textarea {
+        height: 80px;
+    }
+    .formulario {
+        padding: 1rem;
+    }
+}
